@@ -15,7 +15,9 @@ class Roulette
 	const COLOR_BLACK	= 2;
 	const COLOR_RED		= 3;
 
-	const MIN_WHEEL_NUMBER	= 0;
+	// These constants define the number range of the wheel.
+	// -1 represents double-zero.
+	const MIN_WHEEL_NUMBER	= -1;
 	const MAX_WHEEL_NUMBER	= 36;
 
 	private $number;
@@ -36,6 +38,8 @@ class Roulette
 
 	/**
 	 * Returns the resulting number of the last wheel spin.
+	 *
+	 * A return value of -1 should be considered double-zero.
 	 *
 	 * @return int
 	 */
@@ -78,7 +82,7 @@ class Roulette
 	 */
 	private function find_number_color($number)
 	{
-		if ($number == 0)
+		if ($number <= 0)
 		{
 			return self::COLOR_GREEN;
 		}
