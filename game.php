@@ -2,7 +2,9 @@
 
 /**
  * Places bets, spins the roulette wheel and displays the outcome.
-*/
+ *
+ * Note that a return value of -1 should be considered double-zero.
+ */
 
 include 'classes/roulette.class.php';
 include 'classes/roulette_game.class.php';

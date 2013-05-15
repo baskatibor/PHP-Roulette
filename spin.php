@@ -2,7 +2,9 @@
 
 /**
  * Spins the roulette wheel a given number of times and displays the results.
-*/
+ *
+ * Note that a return value of -1 should be considered double-zero.
+ */
 
 include 'classes/roulette.class.php';
 
